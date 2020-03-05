@@ -1,3 +1,5 @@
+import { ADD_TO_CART } from "../actions/types"
+
 const initState = {
   items: [
     {
@@ -48,7 +50,19 @@ const initState = {
 }
 
 const cartReducer = (state = initState, action) => {
-  return state
+  switch (action.type) {
+    case ADD_TO_CART:
+      let addedItem = state.items.find(item => item.id === action.payload)
+      let final = {
+        ...state,
+        addedItems: [...state.addedItems, addedItem],
+        total: state.total + addedItem.price
+      }
+      console.log(final)
+      return final
+    default:
+      return state
+  }
 }
 
 export default cartReducer

@@ -1,10 +1,15 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
+import { addToCart } from "../actions/index"
 
 class ShoppingItems extends React.Component {
   componentDidMount() {
-    console.log(this.props.items)
+    console.log(this.props)
+  }
+
+  handleAddToCartClick = id => {
+    this.props.addToCart(id)
   }
 
   renderItems() {
@@ -15,9 +20,9 @@ class ShoppingItems extends React.Component {
             <div className="card-image">
               <img src={item.img} alt={item.title} />
               <span className="card-title">{item.title}</span>
-              <Link to="/" className="btn-floating halfway-fab waves-effect waves-light red">
+              <span onClick={() => this.handleAddToCartClick(item.id)} className="btn-floating halfway-fab waves-effect waves-light pink">
                 <i className="material-icons">add</i>
-              </Link>
+              </span>
             </div>
 
             <div className="card-content">
@@ -41,8 +46,16 @@ class ShoppingItems extends React.Component {
   }
 }
 
-function mapStateToProps({ cart }) {
-  return { items: cart.items }
+const mapStateToProps = state => {
+  return { items: state.cart.items }
 }
 
-export default connect(mapStateToProps)(ShoppingItems)
+const mapDispatchToProps = dispatch => {
+  return {
+    addToCart: id => {
+      dispatch(addToCart(id))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShoppingItems)

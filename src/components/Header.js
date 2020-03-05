@@ -5,11 +5,11 @@ class Header extends React.Component {
   render() {
     return (
       <nav>
-        <div class="nav-wrapper">
-          <Link to="/" class="brand-logo">
-            <i className="large material-icons heading-icon">local_bar</i> Food Paradise
+        <div className="nav-wrapper">
+          <Link to="/" className="brand-logo">
+            <i className="large material-icons heading-icon">local_dining</i> FastBites
           </Link>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <ul id="nav-mobile" className="right">
             <li>
               <Link to="/cart">
                 <i className="material-icons heading-icon">shopping_basket</i>
