@@ -4,45 +4,46 @@ const initState = {
   items: [
     {
       id: 1,
-      title: "Winter body",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 110,
-      img: "https://materializecss.com/images/sample-1.jpg"
+      title: "Lemon Chicken",
+      sku: "#4216448",
+      desc: "200 kcal",
+      price: 10.5,
+      img: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
     },
     {
       id: 2,
-      title: "Adidas",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 80,
-      img: "https://materializecss.com/images/sample-1.jpg"
+      title: "Roast Chicken",
+      desc: "300kcal",
+      price: 15.0,
+      img: "https://images.unsplash.com/photo-1518492104633-130d0cc84637?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=926&q=80"
     },
     {
       id: 3,
-      title: "Vans",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 120,
-      img: "https://materializecss.com/images/sample-1.jpg"
+      title: "Grilled Chicken",
+      desc: "250kcal",
+      price: 12,
+      img: "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE0MjB9&auto=format&fit=crop&w=1055&q=80"
     },
     {
       id: 4,
-      title: "White",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 260,
-      img: "https://materializecss.com/images/sample-1.jpg"
+      title: "Chicken Momo",
+      desc: "160 kcal",
+      price: 8,
+      img: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
     },
     {
       id: 5,
-      title: "Cropped-sho",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 160,
-      img: "https://materializecss.com/images/sample-1.jpg"
+      title: "Egg sandwich",
+      desc: "183 kcal",
+      price: 6,
+      img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 6,
-      title: "Blues",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 90,
-      img: "https://materializecss.com/images/sample-1.jpg"
+      title: "Tacos",
+      desc: "250kcal",
+      price: 10,
+      img: "https://images.unsplash.com/photo-1564767655658-4e6b365884ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
     }
   ],
   addedItems: [],

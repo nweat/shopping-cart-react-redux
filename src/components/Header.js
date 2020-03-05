@@ -5,9 +5,9 @@ class Header extends React.Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper orange darken-2">
           <Link to="/" className="brand-logo">
-            <i className="large material-icons heading-icon">local_dining</i> FastBites
+            <i className="large material-icons heading-icon">local_dining</i> HealthyBites
           </Link>
           <ul id="nav-mobile" className="right">
             <li>

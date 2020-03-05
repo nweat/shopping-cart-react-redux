@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import { addToCart } from "../actions/index"
 
@@ -20,7 +19,10 @@ class ShoppingItems extends React.Component {
             <div className="card-image">
               <img src={item.img} alt={item.title} />
               <span className="card-title">{item.title}</span>
-              <span onClick={() => this.handleAddToCartClick(item.id)} className="btn-floating halfway-fab waves-effect waves-light pink">
+              <span
+                onClick={() => this.handleAddToCartClick(item.id)}
+                className="btn-floating halfway-fab waves-effect waves-light deep-orange darken-1"
+              >
                 <i className="material-icons">add</i>
               </span>
             </div>

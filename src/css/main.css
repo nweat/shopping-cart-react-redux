@@ -4,6 +4,27 @@
   font-family: "Roboto";
 }
 
+/* override materialize CSS card panel */
 .card-panel {
   border-bottom: 1px solid #eeeeee;
+}
+
+.card .card-image .card-title {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+}
+
+.card-image img {
+  width: 220x;
+  height: 160px;
+}
+
+.card .card-title {
+  font-size: 18px;
+  background: rgb(66, 100, 84);
 }
