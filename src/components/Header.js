@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { connect } from "react-redux"
 
 class Header extends React.Component {
   render() {
@@ -12,7 +13,9 @@ class Header extends React.Component {
           <ul id="nav-mobile" className="right">
             <li>
               <Link to="/cart">
-                <i className="material-icons heading-icon">shopping_basket</i>
+                <i className="material-icons heading-icon">
+                  <small className="notification-badge">{this.props.numItems}</small> shopping_basket
+                </i>
               </Link>
             </li>
           </ul>
@@ -22,4 +25,8 @@ class Header extends React.Component {
   }
 }
 
-export default Header
+const mapStateToProps = state => {
+  return { numItems: state.cart.addedItems.length }
+}
+
+export default connect(mapStateToProps)(Header)
