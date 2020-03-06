@@ -53,14 +53,31 @@ const initState = {
 const cartReducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
+      let currState = {}
       let addedItem = state.items.find(item => item.id === action.payload)
-      let final = {
-        ...state,
-        addedItems: [...state.addedItems, addedItem],
-        total: state.total + addedItem.price
+      let existingItem = state.addedItems.find(item => item.id === action.payload)
+      if (existingItem) {
+        existingItem.qty += 1
+        existingItem.subtotal += addedItem.price
+
+        currState = {
+          ...state,
+          total: state.total + addedItem.price
+        }
+        console.log("existing item update in cart: ")
+        console.log(currState)
+      } else {
+        addedItem.qty = 1
+        addedItem.subtotal = addedItem.price
+        currState = {
+          ...state,
+          addedItems: [...state.addedItems, addedItem],
+          total: state.total + addedItem.price
+        }
+        console.log("new item added to cart: ")
+        console.log(currState)
       }
-      console.log(final)
-      return final
+      return currState
     default:
       return state
   }

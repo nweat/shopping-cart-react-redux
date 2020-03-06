@@ -3,10 +3,6 @@ import { connect } from "react-redux"
 import { addToCart } from "../actions/index"
 
 class ShoppingItems extends React.Component {
-  componentDidMount() {
-    console.log(this.props)
-  }
-
   handleAddToCartClick = id => {
     this.props.addToCart(id)
   }

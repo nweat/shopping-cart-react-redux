@@ -14,11 +14,7 @@
   font-size: 12px;
 }
 
-.heading-icon:hover {
-  opacity: 0.8;
-}
-
-/* override materialize CSS card panel */
+/* Override materialize CSS*/
 .card-panel {
   border-bottom: 1px solid #eeeeee;
 }
@@ -41,4 +37,8 @@
 .card .card-title {
   font-size: 18px;
   background: rgb(66, 100, 84);
+}
+
+.heading-icon:hover {
+  opacity: 0.8;
 }
