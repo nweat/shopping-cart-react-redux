@@ -14,7 +14,7 @@ class ShoppingItems extends React.Component {
           <div className="card">
             <div className="card-image">
               <img src={item.img} alt={item.title} />
-              <span className="card-title">{item.title}</span>
+              <span className="card-title"></span>
               <span
                 onClick={() => this.handleAddToCartClick(item.id)}
                 className="btn-floating halfway-fab waves-effect waves-light deep-orange darken-1"
@@ -24,9 +24,12 @@ class ShoppingItems extends React.Component {
             </div>
 
             <div className="card-content">
-              <p>{item.desc}</p>
               <p>
-                <b>Price: {item.price}$</b>
+                <b>{item.title}</b>
+              </p>
+              <p className="desc">{item.desc}</p>
+              <p>
+                <b className="right">${item.price}</b>
               </p>
             </div>
           </div>
@@ -37,7 +40,7 @@ class ShoppingItems extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container" id="items">
         <div className="row">{this.renderItems()}</div>
       </div>
     )
@@ -48,12 +51,4 @@ const mapStateToProps = state => {
   return { items: state.cart.items }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addToCart: id => {
-      dispatch(addToCart(id))
-    }
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ShoppingItems)
+export default connect(mapStateToProps, { addToCart })(ShoppingItems)

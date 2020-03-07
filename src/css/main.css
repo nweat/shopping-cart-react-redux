@@ -6,39 +6,33 @@
 
 .notification-badge {
   color: #fff;
-  background-color: rgb(66, 100, 84);
+  background-color: rgb(102, 146, 126);
   margin: 0 -0.8em;
   border-radius: 50%;
   padding: 2px 5px;
   text-align: center;
+  font-size: 10px;
+}
+
+.click {
+  cursor: pointer;
+}
+
+#items .card .card-content p.desc {
   font-size: 12px;
 }
 
 /* Override materialize CSS*/
-.card-panel {
-  border-bottom: 1px solid #eeeeee;
-}
-
-.card .card-image .card-title {
-  color: #fff;
-  position: absolute;
-  top: 0;
-  bottom: auto;
-  left: 0;
-  width: 100%;
-  padding: 0px;
-}
-
-.card-image img {
-  width: 220x;
-  height: 160px;
-}
-
-.card .card-title {
-  font-size: 18px;
-  background: rgb(66, 100, 84);
-}
 
 .heading-icon:hover {
   opacity: 0.8;
+}
+
+#cart .card-panel {
+  border-bottom: 1px solid #eeeeee;
+}
+
+#items .card-image img {
+  width: 250x;
+  height: 180px;
 }
