@@ -18,21 +18,38 @@
   cursor: pointer;
 }
 
-#items .card .card-content p.desc {
+.subtotal-label {
+  font-size: 14px;
+  padding: 3px;
+}
+
+.subtotal-currency {
   font-size: 12px;
 }
 
-/* Override materialize CSS*/
+.subtotal {
+  font-size: 18px;
+}
 
+/* Override materialize CSS*/
 .heading-icon:hover {
   opacity: 0.8;
 }
 
 #cart .card-panel {
   border-bottom: 1px solid #eeeeee;
+  padding: 0px;
 }
 
-#items .card-image img {
-  width: 250x;
+#cart .card-panel img {
+  width: 120px;
+  height: 95px;
+}
+
+#items .card .card-image img {
   height: 180px;
+}
+
+#items .card .card-content p.desc {
+  font-size: 12px;
 }
