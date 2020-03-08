@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
+import { Link } from "react-router-dom"
 import { addToCart } from "../actions/index"
 
 class ShoppingItems extends React.Component {
@@ -15,14 +16,14 @@ class ShoppingItems extends React.Component {
             <div className="card-image">
               <img src={item.img} alt={item.title} />
               <span className="card-title"></span>
-              <span
+              <Link
+                to="/cart"
                 onClick={() => this.handleAddToCartClick(item.id)}
-                className="btn-floating halfway-fab waves-effect waves-light deep-orange darken-1"
+                className="btn-floating halfway-fab waves-effect waves-light deep-orange"
               >
                 <i className="material-icons">add</i>
-              </span>
+              </Link>
             </div>
-
             <div className="card-content">
               <p>
                 <b>{item.title}</b>
