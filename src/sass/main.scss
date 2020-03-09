@@ -1,8 +1,6 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto";
-}
+@import "typography/typography";
+@import "base/base";
+@import "components/creditcard";
 
 .notification-badge {
   color: #fff;
@@ -52,4 +50,8 @@
 
 #items .card .card-content p.desc {
   font-size: 12px;
+}
+
+#card .input-field > label {
+  font-size: 0.8rem;
 }
