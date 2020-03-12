@@ -3,11 +3,28 @@ import React from "react"
 class CreditCard extends React.Component {
   render() {
     return (
-      <div className="credit-card grey lighten-2">
-        <span class="black-text">
-          I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use
-          effectively. I am similar to what is called a panel in other frameworks.
-        </span>
+      <div className="credit-card light-blue darken-4 z-depth-5">
+        <div className="row">
+          <span className="col s6 m6 right">
+            <img className="faded" src="https://image.flaticon.com/icons/svg/179/179457.svg"></img>
+          </span>
+        </div>
+        <div className="row">
+          <div className="col s12 m12">
+            <span className="card-number center">....</span>
+            <span className="card-number center">....</span>
+            <span className="card-number center">....</span>
+            <span className="card-number center">....</span>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col s6 m7">
+            <p className="card-name">Nikki Wetterpants</p>
+          </div>
+          <div className="col s6 m5">
+            <p className="card-expiry center">12 / 18</p>
+          </div>
+        </div>
       </div>
     )
   }

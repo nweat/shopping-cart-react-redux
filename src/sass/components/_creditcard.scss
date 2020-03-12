@@ -1,13 +1,39 @@
 .credit-card-details-box {
   padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
 
   .credit-card {
     position: absolute;
     transition: box-shadow 0.25s;
-    padding: 10px;
     margin: 0.5rem 0 1rem 0;
-    border-radius: 7%;
-    width: 300px;
-    right: 250px;
+    border-radius: 7px;
+    width: 240px;
+    right: 130px;
+
+    & .card-number {
+      font-size: 3rem;
+      padding-left: 0.5rem;
+    }
+
+    & .card-name {
+      font-size: 0.8rem;
+      padding-left: 0.5rem;
+    }
+
+    & .card-expiry {
+      font-size: 0.8rem;
+      padding-left: 1rem;
+    }
+
+    & img.faded {
+      position: absolute;
+      top: -30px;
+      right: 5px;
+      width: 100px;
+      height: 100px;
+      opacity: 0.4;
+    }
   }
 }
