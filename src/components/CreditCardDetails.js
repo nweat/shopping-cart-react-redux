@@ -77,7 +77,6 @@ class CreditCardDetails extends React.Component {
           <div className="col s12 m12">
             <button class="btn waves-effect waves-light" type="submit" name="action">
               Checkout
-              <i class="material-icons right">payment</i>
             </button>
           </div>
         </div>
