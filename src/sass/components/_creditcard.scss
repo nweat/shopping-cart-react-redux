@@ -7,6 +7,11 @@
   bottom: 30px;
   color: #fff;
 
+  @media only screen and (max-width: 600px) {
+    bottom: 0px;
+    left: 30px;
+  }
+
   & input {
     color: #fff;
     font-size: 14px;
