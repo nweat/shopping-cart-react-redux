@@ -1,13 +1,26 @@
 .credit-card-details-box {
-  padding: 5px;
+  padding: 15px;
   border-radius: 10px;
   position: relative;
-  width: 350px;
-  left: 50px;
+  width: 320px;
+  left: 70px;
+  bottom: 30px;
   color: #fff;
 
+  & input {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  & input.select-dropdown {
+    font-size: 12px;
+  }
+
   & img.card-type {
-    width: 60px;
+    width: 50px;
+    position: absolute;
+    top: 8.5rem;
+    left: 15.2rem;
   }
 
   .credit-card {
@@ -16,7 +29,7 @@
     margin: 0.5rem 0 1rem 0;
     border-radius: 7px;
     width: 240px;
-    right: 150px;
+    right: 120px;
     color: #fff;
 
     & .card-number {
@@ -36,11 +49,15 @@
 
     & img.faded {
       position: absolute;
-      top: -30px;
+      top: -33px;
       right: 5px;
       width: 100px;
       height: 100px;
       opacity: 0.4;
     }
+  }
+
+  .row {
+    margin-bottom: 18px;
   }
 }

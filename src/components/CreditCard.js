@@ -6,7 +6,7 @@ class CreditCard extends React.Component {
       <div className="credit-card light-blue darken-4 z-depth-3">
         <div className="row">
           <span className="col s6 m6 right">
-            <img className="faded" src="https://image.flaticon.com/icons/svg/179/179457.svg"></img>
+            <img className="faded" alt="" src="https://image.flaticon.com/icons/svg/179/179457.svg"></img>
           </span>
         </div>
         <div className="row">
