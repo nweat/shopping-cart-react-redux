@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 import { addToCart, removeItem, subtractQuantity } from "../actions/index"
+import CreditCardDetails from "./CreditCardDetails"
 
 class ShoppingCart extends React.Component {
   handleAddQuantity(id) {
@@ -19,44 +20,42 @@ class ShoppingCart extends React.Component {
   renderShoppingCart() {
     return this.props.cart.map(item => {
       return (
-        <div className="col s12 m12" key={item.id}>
-          <div className="card-panel z-depth-0">
-            <div className="row valign-wrapper">
-              <div className="col s3">
-                <img src={item.img} alt={item.title} className="circle" />
-              </div>
+        <div className="card-panel z-depth-0" key={item.id}>
+          <div className="row valign-wrapper">
+            <div className="col s3">
+              <img src={item.img} alt={item.title} className="circle" />
+            </div>
 
-              <div className="col s5">
-                <div className="black-text">{item.title}</div>
-                <div className="grey-text text-lighten-1">{item.sku}</div>
-              </div>
+            <div className="col s5">
+              <div className="black-text">{item.title}</div>
+              <div className="grey-text text-lighten-1">{item.sku}</div>
+            </div>
 
-              <div className="col s3">
-                <span className="col s1">
-                  <i className="tiny material-icons click" onClick={() => this.handleAddQuantity(item.id)}>
-                    add
-                  </i>
-                </span>
-                <span className="col s1">{item.qty}</span>
-                <span className="col s1">
-                  <i className="tiny material-icons click" onClick={() => this.handleSubtractQuantity(item.id)}>
-                    remove
-                  </i>
-                </span>
-              </div>
+            <div className="col s3">
+              <span className="col s1">
+                <i className="tiny material-icons click" onClick={() => this.handleAddQuantity(item.id)}>
+                  add
+                </i>
+              </span>
+              <span className="col s1">{item.qty}</span>
+              <span className="col s1">
+                <i className="tiny material-icons click" onClick={() => this.handleSubtractQuantity(item.id)}>
+                  remove
+                </i>
+              </span>
+            </div>
 
-              <div className="col s1">
-                <span className="black-text">
-                  <p>${item.subtotal}</p>
-                </span>
-              </div>
+            <div className="col s1">
+              <span className="black-text">
+                <p>${item.subtotal}</p>
+              </span>
+            </div>
 
-              <div className="col s1">
-                <div className="black-text">
-                  <i className="material-icons click" onClick={() => this.handleRemoveItemFromCart(item.id)}>
-                    close
-                  </i>
-                </div>
+            <div className="col s1">
+              <div className="black-text">
+                <i className="material-icons click" onClick={() => this.handleRemoveItemFromCart(item.id)}>
+                  close
+                </i>
               </div>
             </div>
           </div>
@@ -90,10 +89,17 @@ class ShoppingCart extends React.Component {
 
   render() {
     return (
-      <div className="container" id="cart">
+      <div className="container">
         <h5>{this.props.cart.length > 0 ? "Shopping Cart" : "Shopping Cart is empty"}</h5>
-        {this.renderShoppingCart()}
-        {this.renderTotalRow()}
+        <div className="row">
+          <div className="col s12 m7" id="cart">
+            {this.renderShoppingCart()}
+            {this.renderTotalRow()}
+          </div>
+          <div className="col s12 m5" id="card">
+            <CreditCardDetails />
+          </div>
+        </div>
       </div>
     )
   }
