@@ -23,7 +23,7 @@ class ShoppingCart extends React.Component {
         <div className="card-panel z-depth-0" key={item.id}>
           <div className="row valign-wrapper">
             <div className="col s3">
-              <img src={item.img} alt={item.title} className="circle" />
+              <img src={item.img} alt={item.title} className="circle responsive-img" />
             </div>
 
             <div className="col s5">
