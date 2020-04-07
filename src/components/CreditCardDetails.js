@@ -75,9 +75,7 @@ class CreditCardDetails extends React.Component {
 
         <div className="row">
           <div className="col s12 m12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">
-              Checkout
-            </button>
+            <button class="btn waves-effect waves-light">Checkout</button>
           </div>
         </div>
       </div>
