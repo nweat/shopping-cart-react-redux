@@ -1,6 +1,8 @@
-## HealthyBites
+## [HealthyBites](https://healthybites.herokuapp.com/)
 
 Front end design of an online store where users can choose from a list of healthy meal options for purchase. This is just an initial design concept with the goal of showing the power of React and Redux to manage state along with a concrete UI design.
+
+Feel free to take a look on Heroku: https://healthybites.herokuapp.com/
 
 <br>
 
@@ -15,6 +17,8 @@ Front end design of an online store where users can choose from a list of health
 <br>
 
 ## Want to run the application locally?
+
+Go into the project directory and run:
 
 ### `npm start`
 
