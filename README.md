@@ -2,7 +2,7 @@
 
 Front end design of an online store where users can choose from a list of healthy meal options for purchase. This is just an initial design concept with the goal of showing the power of React and Redux to manage state along with a concrete UI design.
 
-Feel free to take a look on Heroku: https://healthybites.herokuapp.com/
+Feel free to head on over to Heroku to take a look: https://healthybites.herokuapp.com/
 
 <br>
 
